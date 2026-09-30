@@ -130,8 +130,8 @@ html {
 
 /*People*/
 .message {
-  margin: 15px auto;
-  max-width: 350px;
+  margin: 10px;
+  text-align: center;
   flex-wrap: wrap;
   font-family: 'Poppins' , sans-serif;
   font-weight: 100;
