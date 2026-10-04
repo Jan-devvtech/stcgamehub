@@ -49,7 +49,7 @@ html {
   background-color: hwb(0 81% 19%);
   border-radius: 10px;
   flex-wrap: wrap;
-  box-shadow: 0 3px 4px black;
+  box-shadow: 1px 3px 5px black;
   margin-bottom: 70px;
 }
 .p h3 {
@@ -78,6 +78,7 @@ html {
 
 
 
+
 /*Content*/
 .content {
   margin: 5px;
@@ -90,26 +91,18 @@ html {
 .content iframe {
   border-radius: 10px;
 }
-.subscribe {
-  background-color: hwb(0 9% 9%);
-  border-radius: 10px;
-  padding: 0 10px;
-  margin: 10px auto;
-  max-width: 100%;
-  width: 200px;
-  font-weight: bold;
-  text-align: center;
-  flex-wrap: wrap;
-}
 .subscribe a {
+  background-color: red;
   text-decoration: none;
   display: block;
+  width: 110px;
+  margin: 40px auto;
   padding: 10px 20px;
   color: hwb(0 100% 0%);
+  border-radius: 10px;
 }
 .subscribe a:active {
   background-color: hwb(0 6% 24%);
-  border-radius: 10px;
 }
 
 
@@ -132,6 +125,19 @@ html {
 }
 .navBar a:active {
   background-color: hwb(232 16% 53%);
+}
+
+marquee {
+  color: lab(0% 0 0);
+  margin: 0;
+  padding: 0;
+  background-color:  hwb(0 90% 10%); 
+  border-radius: 5px;
+  box-shadow: inset 1px 2px 4px hwb(0 27% 73%);
+}
+.small {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -202,13 +208,164 @@ article {
 
 
 
+/*
+.inquiry {
+        margin: 40px auto;
+        max-width: 650px;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 50px;
+        color: lab(0% 0 0);
+        background-color: hwb(0 87% 13%); 
+        border-radius: 15px;
+        box-shadow: 1px 2px 4px black;
+      }
+      .flex {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+      .inquiry-form1 input[type="text"],
+      .inquiry-form1 input[type="email"] {
+        background-color: hwb(0 84% 16%);
+        border-radius: 5px;
+        box-shadow: inset 1px 2px 4px black;
+        border: none;
+        padding: 5px;
+        color: lab(0% 0 0);
+      }
+      .inquiry-form2 input[type="tel"] {
+        background-color:  hwb(0 84% 16%);
+        border-radius: 5px;
+        box-shadow: inset 1px 2px 4px black;
+        border: none;
+        padding: 5px;
+        color: lab(0% 0 0); 
+      }
+      .inquiry-form2 select {
+        color: lab(0% 0 0); 
+        background-color: hwb(0 84% 16%);
+      }
+      .inquiry-form1, 
+      .inquiry-form2 {
+        flex: 1 1 200px;
+      }
+      input, textarea {
+        outline: none;
+        caret-color: lab(0% 0 0);
+      }
+      .inquiry-text {
+        text-align: center;
+      }
+      .message {
+        display: block
+      }
+      .message textarea {
+        border: none;
+        color: lab(0% 0 0);
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: hwb(0 84% 16%);
+        box-shadow: inset 1px 2px 4px black;
+        border-radius: 10px;
+      }
+      .message label {
+        font-weight: bold;
+      }
+      .bottom {
+        text-align: center;
+      }
+      .reset-submit {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+      .reset-submit input[type="reset"],
+      .reset-submit input[type="submit"] {
+        border: none;
+        padding: 5px;
+        color: lab(0% 0 0);
+        font-weight: bold;
+        background-color: hwb(0 100% 0%);
+        border-radius: 5px;
+        box-shadow: 1px 20x 4px lab(0% 0 0);
+      }
+*/
+
+
+
+
+/*About Us*/
+.About-STCGamehub {
+  margin: 0;
+  max-width: 100%;
+  background-color: #efefef; 
+}
+.About-STCGamehub h3 {
+  margin: 5px;
+}
+.About-Us {
+  margin: 5px;
+}
+.image-text {
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.image {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1;
+}
+.italic-text {
+  font-style: italic;
+  font-size: 85%;
+  flex-wrap: wrap;
+  padding: 5px;
+  scroll-behavior: smooth;
+  max-width: 100px;
+  min-width: 100px;
+  max-height: 150px;
+  overflow: auto;
+  background-color: hwb(0 79% 21%);
+  border-radius: 10px;
+  box-shadow: inset 1px 2px 4px black;
+}
+.underline {
+  text-decoration: underline;
+}
+.about-footer,
+.about-footer footer {
+  justify-content: center;
+  color: hwb(0 56% 44%);
+  padding: 5px;
+  margin-top: auto;
+  background-color:  lab(0% 0 0);
+}
+.contact-footer a {
+  text-decoration: none;
+}
+.contact-footer img {
+  border-radius: 50px;
+  gap: 20px;
+}
+
+
+
+
+
+
 
 
 /*Footer*/
 footer {
   text-align: center;
   color: white;
-  padding: 5px;
+  padding: 0;
   margin-top: auto;
   background-color:  hwb(240 0% 65%);
 }
