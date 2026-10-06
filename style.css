@@ -4,9 +4,122 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: white;
   font-family: 'Poppins', Roboto, Arial, Sans-Serif;
 }
+body.home-page,
+body.news-page, 
+body.people-page,
+body.about-page {
+  background-color: white;
+}
+body.home-page .navigation-bar marquee {
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  color: lab(0% 0 0);
+  background: rgba(0, 0, 0, 0.10196078431372549);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7803921568627451);
+}
+
+
+
+
+/*Content-Page*/
+body.content-page {
+  background: linear-gradient(180deg, black, hwb(0 17% 83%), #000000);
+  background-attachment: fixed;
+}
+body.content-page footer {
+  color: hwb(0 100% 0%);
+  margin-top: auto;
+  background-color: lab(0% 0 0);
+}
+body.content-page .navBar ul {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 1px white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+body.content-page header {
+  background-color: lab(0% 0 0);
+}
+
+
+
+
+/*About Page*/
+body.about-page {
+  color: white;
+  background: linear-gradient(180deg, black, hwb(0 37% 63%), #000000);
+  background-attachment: fixed;
+}
+body.about-page .navBar ul {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 8px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+body.about-page header {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 1px hwb(0 100% 0%);
+}
+body.about-page a {
+  color: hwb(0 100% 0%);
+  font-weight: bold;
+}
+body.about-page footer, .about-footer {
+  background-color: black;
+  margin-top: auto;
+}
+body.about-page .italic-text {
+  background: linear-gradient(180deg, hwb(0 100% 0%), #000000);
+  background-attachment: fixed;
+}
+body.about-page ::selection {
+  color: white;
+  background: linear-gradient(180deg, black, hwb(0 6% 94%), #000000);
+  background-attachment: fixed;
+}
+
+
+
+
+/*Frequently Asked Questions*/
+body.FAQ-page {
+  background: linear-gradient(180deg, gray, black, white);
+  background-attachment: fixed;
+}
+body.FAQ-page header,
+body.FAQ-page .navBar ul,
+body.FAQ-page footer {
+  background: linear-gradient(180deg, gray, black, white);
+  background-attachment: fixed;
+}
+body.FAQ-page a::selection {
+  background-color: white;
+}
+body.FAQ-page .navBar ul {
+  margin-top: 10px;
+  justify-content: left;
+}
+body.FAQ-page a {
+  background-color: hwb(0 40% 60%);
+  border-radius: 10px;
+  box-shadow: 0 0 4px white
+}
+body.FAQ-page header {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 1px white; 
+}
+body.FAQ-page footer {
+  color: black;
+  margin-top: auto;
+}
+
+
+
+
 header {
   display: flex;
   gap: 20px;
@@ -41,6 +154,7 @@ html {
 
 /*Paragaph*/
 .p {
+  display: flex;
   font-size: 90%;
   margin: 50px auto;
   max-width: 90%;
@@ -53,6 +167,11 @@ html {
   margin-bottom: 70px;
 }
 .p h3 {
+  width: 100%;
+  text-align: center;
+}
+.p time {
+  width: 100%;
   text-align: center;
 }
 .p a {
@@ -80,6 +199,7 @@ html {
 
 
 /*Content*/
+
 .content {
   margin: 5px;
   justify-content: center;
@@ -92,7 +212,7 @@ html {
   border-radius: 10px;
 }
 .subscribe a {
-  background-color: red;
+  background: rgba(255, 4, 4, 0.8196078431372549);
   text-decoration: none;
   display: block;
   width: 110px;
@@ -100,9 +220,11 @@ html {
   padding: 10px 20px;
   color: hwb(0 100% 0%);
   border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgb(255, 0, 0, 0.8);
 }
 .subscribe a:active {
-  background-color: hwb(0 6% 24%);
+  background-color: hwb(0 0% 14%);
 }
 
 
@@ -121,19 +243,10 @@ html {
 .navBar a {
   color: white;
   text-decoration: none;
-  padding: 5px 10px;;
+  padding: 5px 10px;
 }
 .navBar a:active {
   background-color: hwb(232 16% 53%);
-}
-
-marquee {
-  color: lab(0% 0 0);
-  margin: 0;
-  padding: 0;
-  background-color:  hwb(0 90% 10%); 
-  border-radius: 5px;
-  box-shadow: inset 1px 2px 4px hwb(0 27% 73%);
 }
 .small {
   margin: 0;
@@ -145,6 +258,7 @@ marquee {
 
 /*People*/
 .message {
+  display: flex;
   margin: 10px;
   text-align: center;
   flex-wrap: wrap;
@@ -178,9 +292,14 @@ marquee {
   margin-bottom: 50px;
   background-color: hwb(0 100% 0%);
 }
+.container a {
+  color: hwb(0 28% 72%);
+  text-decoration: none;
+  
+}
 .article {
   justify-content: center;
-  padding: 20px 10px;;
+  padding: 20px 10px;
   gap: 20px;
   flex-wrap: wrap;
   display: flex;
@@ -289,7 +408,7 @@ article {
         font-weight: bold;
         background-color: hwb(0 100% 0%);
         border-radius: 5px;
-        box-shadow: 1px 20x 4px lab(0% 0 0);
+        box-shadow: 1px 20px 4px lab(0% 0 0);
       }
 */
 
@@ -300,7 +419,6 @@ article {
 .About-STCGamehub {
   margin: 0;
   max-width: 100%;
-  background-color: #efefef; 
 }
 .About-STCGamehub h3 {
   margin: 5px;
@@ -321,6 +439,10 @@ article {
   gap: 10px;
   flex: 1;
 }
+.image img {
+  border-radius: 10px;
+  box-shadow: 0 0 5px hwb(0 100% 0%);
+}
 .italic-text {
   font-style: italic;
   font-size: 85%;
@@ -331,9 +453,9 @@ article {
   min-width: 100px;
   max-height: 150px;
   overflow: auto;
-  background-color: hwb(0 79% 21%);
   border-radius: 10px;
-  box-shadow: inset 1px 2px 4px black;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 4px white;
 }
 .underline {
   text-decoration: underline;
@@ -342,9 +464,7 @@ article {
 .about-footer footer {
   justify-content: center;
   color: hwb(0 56% 44%);
-  padding: 5px;
   margin-top: auto;
-  background-color:  lab(0% 0 0);
 }
 .contact-footer a {
   text-decoration: none;
@@ -355,6 +475,27 @@ article {
 }
 
 
+
+
+/*Frequently Ask Questions*/
+.summary-container {
+  font-family: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  max-width: 600%;
+  min-width: 90%;  
+  padding: 25px;
+  border-radius: 10px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px hwb(0 100% 0%);
+}
+.summary-container ul {
+  color: white;
+  list-style-type: circle;
+}
 
 
 
