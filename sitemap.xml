@@ -3,35 +3,40 @@
   <!-- Home Page -->
   <url>
     <loc>https://jan-devvtech.github.io/stcgamehub/index.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>1.00</priority>
   </url>
   
   <!-- News Page -->
   <url>
     <loc>https://jan-devvtech.github.io/stcgamehub/news.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- People Page -->
   <url>
     <loc>https://jan-devvtech.github.io/stcgamehub/people.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- Content Page -->
   <url>
     <loc>https://jan-devvtech.github.io/stcgamehub/content.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- About Page -->
   <url>
     <loc>https://jan-devvtech.github.io/stcgamehub/about.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://jan-devvtech.github.io/stcgamehub/faq.html</loc>
+    <lastmod>2026-10-06</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
