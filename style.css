@@ -20,7 +20,9 @@ body.home-page .navigation-bar marquee {
   background: rgba(0, 0, 0, 0.10196078431372549);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7803921568627451);
 }
-
+* h1 {
+  font-size: 24px;
+}
 
 
 
