@@ -1,56 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', Roboto, Arial, Sans-Serif;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background-color: hwb(240 13% 80%);
 }
-body.home-page,
-body.news-page, 
-body.people-page,
-body.about-page {
-  background: linear-gradient(875deg, lab(0% 0 0), hwb(238 5% 80%)); 
-  background-attachment: fixed;
+html {
+  scroll-behavior: smooth;
 }
 
+
+
+/*Heading*/
+body.home-html header,
+body.about-html header,
+body.gallery-html header,
+body.news-html header,
+body.content-html header {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  background-color: rgba(50, 55, 70, 0.2);
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+/*Navigation Bar*/
+.navigation-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:  rgba(35, 40, 55, 0.95);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0.5);
+  z-index: 1000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.navigation-button {
+  justify-content: center;
+  display: flex;
+  font-size: 75%;
+  gap: 15px;
+  margin: 5px auto;
+}
+.navigation-button a {
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+  color: pink;
+  padding: 10px 5px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+}
+.navigation-button a:hover {
+  background-color: hwb(240 13% 80%);
+}
+.navigation-button a.active {
+  background-color: hwb(240 13% 80%);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Shared Headings Font*/
+body.home-html h1, body.home-html h2, body.home-html h3, body.home-html h4,
+body.about-html h1, body.about-html h2, body.about-html h3, body.about-html h4,
+body.gallery-html h1, body.gallery-html h2, body.gallery-html h3, body.gallery-html h4,
+body.news-html h1, body.news-html h2, body.news-html h3, body.news-html h4,
+body.content-html h1, body.content-html h2, body.content-html h3, body.content-html h4 {
+  font-family: 'Poppins', sans-serif;
+}
 
 
 
 
 
 /*Home Page*/
-body.home-page .navigation-bar marquee {
-  padding: 0;
+body.home-html .number {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 2;
   margin: 0;
-  border-radius: 10px;
-  color: hwb(0 100% 0%);
-  background: rgba(10, 15, 40, 0.2);
-  box-shadow: inset 0 0 1px white;
-  font-style: italic;
+  padding: 3px 8px;
+  min-width: 24px;
+  height: 10%;
+  border-radius: 10px 0 10px;
+  box-shadow: inset 0 0 2px gray;
+  background-color: hwb(240 13% 80%);
 }
-body.home-page .home {
-  margin: 5px;
-  color: white;
+body.home-html span {
+  color: pink;
 }
-.home a {
+body.home-html h1 {
+  margin-top: -2px;
+  line-height: 1.1;
+}
+body.home-html .dropdown {
+  position: relative;
+  width: 50px;
+  margin-left: auto;
+  margin-right: 15px;
+}
+body.home-html .dropdown button {
+  box-shadow: 0 2px 5px black;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+  width: 50px;
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+body.home-html .dropdown button:hover {
+  background-color: white;
+}
+body.home-html .menu {
+  border-radius: 6px;
+  top: 30%;
+  display: none;
+  right: 0;
+  width: 160px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: gray;
+  box-shadow: 0 0 2px white;
+}
+body.home-html .dropdown:focus-within .menu {
+  display: block;
+}
+body.home-html .dropdown ul {
+  list-style-type: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 100px;
+  font-size: 14px;
+}
+body.home-html .dropdown li:hover {
+  background-color: hwb(0 83% 17%);
+}
+body.home-html .dropdown a {
+  color: black;
   text-decoration: none;
-  color: hwb(0 59% 41%);
-  font-style: italic;
+  display: block;
 }
-body.home-page ul {
-  margin-right: 5px;
-}
-.text {
+body.home-html main {
   color: white;
   margin: 5px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
-body.home-page main {
+
+/*Main Content*/
+body.home-html .introduction {
+  background-image: linear-gradient(480deg, hwb(240 13% 80%), hwb(240 13% 80%), rgba(0, 0, 0, 0.5)), url('minecraft.png');
+  background-size: cover;
+  background-position: right center;
+  padding: 15px 20px 15px 10px;
+  margin: 10px 0;
+  height: 350px;
+}
+.introduction b {
+  color: hwb(351 77% 0%);
+}
+body.home-html .introduction p {
+  margin-top: -10px;
+}
+body.home-html .introduction h1 {
+  line-height: 1.1;
+  margin-top: -2px;
+  font-weight: 700;
+}
+body.home-html .introduction .home-heading {
+  margin-top: -10px;
+}
+body.home-html .introduction ul {
+  font-size: 50%;
+}
+body.home-html .introduction .dot {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: red;
+  border-radius: 50%;
+  box-shadow: 0 0 15px red;;
+  margin-left: 8px;
+  height: 10px;
+  width: 10px;
+}
+body.home-html .page {
+  margin-top: 20px;
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1px white;
+  border-radius: 50px;
+}
+@media (min-width: 768px) {
+  .page {
+    max-width: 15%;
+  }
+}
+body.home-html .page a {
+  text-decoration: none;
+  font-weight: bold; 
+  color: white;
+  display: block;
+}
+body.home-html .news-card {
+  scroll-behavior: smooth;
+  gap: 15px;
+  margin-top: -10px;
+  margin-left: -5px;
+  margin-right: -5px;
+  width: calc(100% + 10px);
+  padding: 0 15px;
+  display: flex;
+  overflow-x: auto;
+  box-sizing: border-box;
+  height: 280px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 15px;
+}
+body.home-html .news-card::-webkit-scrollbar { 
+  display: none; 
+}
+@media (min-width: 768px) {
+  .news-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+body.home-html div .container {
+  position: relative;
+  scroll-snap-align: center;
+  flex: 0 0 160px;
+  margin-top: 5px;
+  background-color: hwb(240 13% 80%);
+  box-shadow: inset 0 0 2px gray;
+  height: 230px;
+  width: 170px;
+  padding: 5px;
+  border-radius: 10px;
+}
+body.home-html .container a {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+body.home-html .container img {
+  margin-top: 5px;;
+  border-radius: 5px;
+}
+body.home-html div .container p {
   flex-wrap: wrap;
+  margin-top: 5px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: 50%;
+  color: hwb(0 100% 0%);
+  margin-top: -20px;
+  padding: 5px;
 }
-* h1 {
-  font-size: 24px;
+body.home-html .container h6 {
+  margin-top: -1px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*About Page*/
+body.about-html {
+  background-image: linear-gradient(480deg, hwb(240 13% 80%), hwb(240 13% 80%), rgba(0, 0, 0, 0.5)), url('minecraft.png');
+  background-size: cover;
+  background-position: right center;
+  min-height: 100vh;
+  margin: 0;
+  margin-bottom: 50px;
+  color: white;
+}
+body.about-html header {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  background-color: rgba(50, 55, 70, 0.2);
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+}
+body.about-html .image {
+  position: relative;
+  width: 50px;
+  margin-left: auto;
+  margin-right: 15px;
+}
+body.about-html .image img {
+  margin-top: 5px;
+  border-radius: 50%;
+}
+body.about-html .image a {
+  font-size: 50%;
+  margin-top: 1px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+body.about-html span {
+  color: pink;
+}
+body.about-html h1 {
+  color: white;
+  margin-top: -2px;
+  line-height: 1.1;
+}
+body.about-html main {
+  margin: 5px;
+}
+body.about-html .about-section {
+  font-size: 90%;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-top: -15px;
+  min-height: 250px;
+  max-height: 300px;
+  max-width: 70%;
+  min-width: 70%;
+  background-color: rgba(255, 255, 255, 0.2);
+  overflow: auto;
+  box-shadow: inset 0 0 1px white;
+  border-radius: 10px;
+  margin: 10px;
+}
+body.about-html .about-section p, 
+body.about-html .about-section h4 {
+  text-align: center;
+}
+body.about-html .stc-activities .text {
+  margin-top: -15px;
+}
+body.about-html .stc-activities {
+  margin: 5px;
+}
+body.about-html i {
+  color: hwb(0 79% 21%);
+}
+
+
+
+
+
+
+/*Gallery Page*/
+body.gallery-html {
+  background-color: hwb(240 13% 80%);
+  color: white;
+  min-height: 100vh;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+body.gallery-html span {
+  color: pink;
+}
+body.gallery-html h1 {
+  margin-top: -2px;
+  line-height: 1.1;
+}
+
+body.gallery-html .my-gallery {
+  flex-wrap: wrap;
+  margin-top: 5px;
+  display: flex;
+  gap: 15px;
+  margin: 40px auto;
+  justify-content: center;
+}
+body.gallery-html .home-heading {
+  margin: 5px;
 }
 
 
@@ -61,493 +411,74 @@ body.home-page main {
 
 
 /*News Page*/
-body.news-page .container {
-  margin: 40px auto;
+body.news-html {
+  color: white;
+  margin: 0;
+  margin-bottom: 40px;
+}
+body.news-html span {
+  color: pink;
+}
+body.news-html h1 {
+  margin-top: -2px;
+  line-height: 1.1;
+}
+body.news-html main {
+  margin: 5px;
   margin-bottom: 50px;
 }
-body.news-page .container a {
-  color: hwb(0 28% 72%);
-  text-decoration: none;
-  
-}
-body.news-page .article {
-  justify-content: center;
-  padding: 20px 10px;
-  gap: 20px;
-  flex-wrap: wrap;
-  display: flex;
-}
-body.news-page article {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 350px;
-  color: white;
-  min-width: 250px;
-  max-height: 300px;
+body.news-html .news-title {
   text-align: center;
-  box-shadow: 0 0 1px hwb(0 100% 0%);
-  overflow: auto;
-  scroll-behavior: smooth;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 1px white; 
+  color: white;
+  border-radius: 10px;
 }
-body.news-page .article a {
+body.news-html .article span {
+  color: gray;
+}
+body.news-html .article a {
+  color: white;
   text-decoration: none;
   font-style: italic;
-  color: hwb(0 28% 72%);
 }
-body.news-page .article i {
-  font-size: 75%;
-}
-body.news-page .teaser-poster {
-  gap: 30px;
-}
-body.news-page .teaser-poster img {
-  border-radius: 10px;
-}
-
-
-
-
-
-
-
-/*People Page*/
-body.people-page .message {
-  color: white;
-  display: flex;
-  margin: 10px;
-  text-align: center;
-  flex-wrap: wrap;
-  font-family: 'Poppins' , sans-serif;
-  font-weight: 100;
-  letter-spacing: 0.5px;
-}
-body.people-page .photo {
-  margin: 40px auto;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-  gap: 20px;
-  border-radius: 10px;
-}
-body.people-page .photo img {
-  border-radius: 10px;
-}
-body.people-page .title {
-  margin: 5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/*Content-Page*/
-body.content-page {
-  background: linear-gradient(180deg, black, hwb(0 17% 83%), #000000);
-  background-attachment: fixed;
-}
-body.content-page footer {
-  color: hwb(0 100% 0%);
-  margin-top: auto;
-  background-color: lab(0% 0 0);
-}
-body.content-page .navBar ul {
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 0 1px white;
-  border-radius: 10px;
-  font-weight: bold;
-}
-body.content-page header {
-  background-color: lab(0% 0 0);
-}
-body.content-page .content {
-  margin: 5px;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 60px;
-}
-body.content-page .content iframe {
-  border-radius: 10px;
-}
-body.content-page .subscribe a {
-  background: rgba(255, 4, 4, 0.8196078431372549);
-  text-decoration: none;
-  display: block;
-  width: 110px;
-  margin: 40px auto;
-  padding: 10px 20px;
-  color: hwb(0 100% 0%);
-  border-radius: 10px;
-  font-weight: bold;
-  box-shadow: 0 0 20px rgb(255, 0, 0, 0.8);
-}
-body.content-page .subscribe a:active {
-  background-color: hwb(0 0% 14%);
-}
-
-
-
-
-
-
-
-
-/*About Page*/
-body.about-page {
-  color: white;
-  background: linear-gradient(180deg, black, hwb(0 37% 63%), #000000);
-  background-attachment: fixed;
-}
-body.about-page header {
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 0 1px hwb(0 100% 0%);
-}
-body.about-page a {
-  color: hwb(0 100% 0%);
-  font-weight: bold;
-}
-body.about-page .navBar ul {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 8px 20px rgba(0, 0, 0, 0.4);
-  border-radius: 15px;
-}
-body.about-page .p {
-  display: flex;
+body.news-html .container {
   font-size: 90%;
-  margin: 50px auto;
-  max-width: 95%;
-  padding: 20px;
-  color: hwb(0 100% 0%);
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  flex-wrap: wrap;
-  box-shadow: inset 0 0 1px white;
-  margin-bottom: 70px;
 }
-body.about-page .p h3 {
-  width: 100%;
-  text-align: center;
-}
-@media (min-width: 1024px) {
-  .p {
-    max-width: 700px;
-    font-size: 100%;
-  }
-}
-body.about-page .About-STCGamehub {
+
+
+
+
+
+
+
+
+/*Content Page*/
+body.content-html {
+  color: white;
   margin: 0;
-  max-width: 100%;
+  margin-bottom: 50px;
 }
-body.about-page .About-STCGamehub h3 {
-  margin: 5px;
+body.content-html span {
+  color: pink;
 }
-body.about-page .About-Us {
-  margin: 5px;
+body.content-html h1 {
+  margin-top: -2px;
+  line-height: 1.1;
 }
-body.about-page .image-text {
-  display: flex;
-  margin: 5px;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: flex-start;
+body.content-html .content iframe {
+  border-radius: 10px;
 }
-body.about-page .image {
+body.content-html .content {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  flex: 1;
+  margin: 5px 5px;
 }
-body.about-page .image img {
-  border-radius: 10px;
-  box-shadow: 0 0 5px hwb(0 100% 0%);
+body.content-html main {
+  margin: 20px 5px 5px;
+  margin-bottom: 50px;
 }
-body.about-page .italic-text {
-  font-style: italic;
-  font-size: 85%;
-  flex-wrap: wrap;
-  padding: 5px;
-  scroll-behavior: smooth;
-  max-width: 100px;
-  min-width: 100px;
-  max-height: 150px;
-  overflow: auto;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 4px white;
-}
-body.about-page .underline {
-  text-decoration: underline;
-}
-body.about-page .about-footer,
-body.about-page .about-footer footer {
-  justify-content: center;
-  color: hwb(0 56% 44%);
-  margin-top: auto;
-  padding: 5px;
-}
-body.about-page .contact-footer img, .contact-footer a {
-  margin: 1px;
-  text-decoration: none;
-  border-radius: 50px;
-  gap: 20px;
-}
-body.about-page footer, .about-footer {
-  background-color: black;
-  margin-top: auto;
-}
-body.about-page .italic-text {
-  background: linear-gradient(180deg, hwb(0 100% 0%), #000000);
-  background-attachment: fixed;
-}
-body.about-page ::selection {
-  color: hwb(247 0% 17%);
-  background: linear-gradient(180deg, black, hwb(0 100% 0%), #000000);
-  background-attachment: fixed;
-}
-
-
-
-
-
-
-
-
-/*Frequently Asked Questions*/
-body.FAQ-page {
-  background: linear-gradient(180deg, gray, black, white);
-  background-attachment: fixed;
-}
-body.FAQ-page header,
-body.FAQ-page .navBar ul {
-  background: linear-gradient(180deg, gray, black, white);
-  background-attachment: fixed;
-}
-body.FAQ-page a::selection {
-  background-color: white;
-}
-body.FAQ-page .navBar ul {
-  margin-top: 10px;
-  justify-content: left;
-}
-body.FAQ-page a {
-  background-color: hwb(0 40% 60%);
-  border-radius: 10px;
-  box-shadow: 0 0 4px white
-}
-body.FAQ-page header {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-  box-shadow: 0 0 1px white; 
-}
-body.FAQ-page footer {
-  font-weight: bold;
-  color: hwb(0 45% 55%);
-  background-color: rgba(0, 0, 0, 0.10196078431372549);
-  margin-top: auto;
-  border-radius: 5px;
-  box-shadow: inset 0 0 5px white;
-}
- body.FAQ-page .summary-container {
-  font-family: bold;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  margin: 25px auto;
-  max-width: 600%;
-  min-width: 90%;  
-  padding: 25px;
-  border-radius: 10px;
-  width: 100px;
-  background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 1px hwb(0 100% 0%);
-}
-body.FAQ-page .summary-container ul {
-  color: white;
-  list-style-type: circle;
-}
-
-
-
-
-
-
-
-
-/*Body Header & Navigation Bar*/
-header {
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  color: white;
-  background-color: rgba(30, 50, 185, 0.2);
-  box-shadow: inset 0 0 2px white;
-  border-radius: 5px;
-}
-header img {
-  margin: 5px;
-}
-header h2 {
-  font-weight: bold;
-}
-html {
-  scroll-behavior: smooth;
-}
-::selection {
-  color: hwb(0 100% 0%);
-  font-family: bold;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-* {
-  box-sizing: border-box;
-}
-.navBar ul {
-  margin: 5px;
-  padding: 5px;
-  display: flex;  
-  list-style-type: none;
-  justify-content: center;
-  gap: 15px;
-  background-color:  rgba(10, 15, 40, 0.2); 
-  box-shadow: inset 0 0 2px white;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-.navBar a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-}
-.navBar a:active {
-  background-color: hwb(232 16% 53%);
-}
-.small {
-  margin: 0;
-  padding: 0;
-}
-
-
-
-
-
-
-
-
-
-
-/*
-.inquiry {
-        margin: 40px auto;
-        max-width: 650px;
-        width: 90%;
-        box-sizing: border-box;
-        padding: 50px;
-        color: lab(0% 0 0);
-        background-color: hwb(0 87% 13%); 
-        border-radius: 15px;
-        box-shadow: 1px 2px 4px black;
-      }
-      .flex {
-        display: flex;
-        gap: 50px;
-        flex-wrap: wrap;
-      }
-      .inquiry-form1 input[type="text"],
-      .inquiry-form1 input[type="email"] {
-        background-color: hwb(0 84% 16%);
-        border-radius: 5px;
-        box-shadow: inset 1px 2px 4px black;
-        border: none;
-        padding: 5px;
-        color: lab(0% 0 0);
-      }
-      .inquiry-form2 input[type="tel"] {
-        background-color:  hwb(0 84% 16%);
-        border-radius: 5px;
-        box-shadow: inset 1px 2px 4px black;
-        border: none;
-        padding: 5px;
-        color: lab(0% 0 0); 
-      }
-      .inquiry-form2 select {
-        color: lab(0% 0 0); 
-        background-color: hwb(0 84% 16%);
-      }
-      .inquiry-form1, 
-      .inquiry-form2 {
-        flex: 1 1 200px;
-      }
-      input, textarea {
-        outline: none;
-        caret-color: lab(0% 0 0);
-      }
-      .inquiry-text {
-        text-align: center;
-      }
-      .message {
-        display: block
-      }
-      .message textarea {
-        border: none;
-        color: lab(0% 0 0);
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        background-color: hwb(0 84% 16%);
-        box-shadow: inset 1px 2px 4px black;
-        border-radius: 10px;
-      }
-      .message label {
-        font-weight: bold;
-      }
-      .bottom {
-        text-align: center;
-      }
-      .reset-submit {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-      }
-      .reset-submit input[type="reset"],
-      .reset-submit input[type="submit"] {
-        border: none;
-        padding: 5px;
-        color: lab(0% 0 0);
-        font-weight: bold;
-        background-color: hwb(0 100% 0%);
-        border-radius: 5px;
-        box-shadow: 1px 20px 4px lab(0% 0 0);
-      }
-*/
-
-
-
-
-
-
-
-
-
-
-
-/*Footer*/
-* footer {
-  text-align: center;
-  color: white;
-  padding: 0;
-  margin-top: auto;
-  border-radius: 10px;
-  background-color:  rgba(10, 15, 40, 0.2);
-  box-shadow: inset 0 0 2px white;
+body.content-html h3 {
+  margin: 15px 5px;
 }
