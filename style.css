@@ -301,6 +301,7 @@ body.about-html {
   background-position: right center;
   min-height: 100vh;
   margin: 0;
+  background-attachment: fixed;
   margin-bottom: 50px;
   color: white;
 }
